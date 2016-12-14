@@ -16,7 +16,6 @@ public class Base
         a.llenar();
         a.mostrar();
     }
-    
 }
 
 class Malla
@@ -30,18 +29,22 @@ class Malla
         malla=new int[n][m];
     }   
         
+    // llena la matriz con elementos pares
     public void llenar()
     {
+        // llenar el vector 'linea' con la serie 0,1,2,3,4,5...
         int largo=n*m;
-        int [] linea = new int [100];
+        int [] linea = new int [largo];
         for(int i=0;i<largo;i++)
         {
             linea[i]=i;
         }
         
+        // seleccionar un elemento del vector aleatoriamente
+        // reeplazarlo con el ultimo elemento del vector
+        // y reducir el tamaño del vector en 1
         Random aleatorio = new Random();
         int lugar,valor;
-        System.out.println("************");
         float contador=1.0f;
         for(int i=0;i<largo;i++)
         {
